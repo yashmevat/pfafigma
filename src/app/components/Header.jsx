@@ -1,19 +1,34 @@
 "use client";
-import { use, useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { User, MoreVertical, Globe, Menu, X } from "lucide-react";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  // Detect scroll position to add sticky shadow
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) setIsSticky(true);
+      else setIsSticky(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="w-full shadow-2xl">
+    <header
+      className={`w-full z-50 top-0 transition-all duration-300 ${
+        isSticky ? "fixed shadow-lg bg-white/95 backdrop-blur-sm" : "relative"
+      }`}
+    >
       {/* --- Top Black Bar --- */}
       <div className="bg-black text-white">
         <div
           className="
-            flex items-center justify-between px-4 md:px-6 h-20
+            flex items-center justify-between px-4 md:px-6 h-16
             max-w-7xl mx-auto
             2xl:max-w-none 2xl:mx-0 2xl:px-20
           "
@@ -27,7 +42,6 @@ export default function Header() {
               height={50}
               className="object-contain rounded-sm"
             />
-            {/* Hide full name on small screens */}
             <span className="font-bold text-sm sm:text-md leading-none hidden sm:inline">
               Cognitive Alliance Forumz (CAF)
             </span>
@@ -36,15 +50,10 @@ export default function Header() {
 
           {/* Right: Greeting + Icons + Hamburger */}
           <div className="flex items-center gap-3 text-xs sm:text-sm">
-            {/* Greeting (desktop only) */}
             <span className="whitespace-nowrap hidden sm:inline mr-5">
               Hi Daniel Brin
             </span>
-
-            {/* User icon always visible */}
             <User className="w-5 h-5" />
-
-            {/* Three-dot icon: hide on mobile */}
             <MoreVertical className="w-5 h-5 hidden sm:flex" />
 
             {/* Hamburger (mobile only) */}
@@ -65,13 +74,16 @@ export default function Header() {
       </div>
 
       {/* --- Navigation Bar --- */}
-      <div className="bg-white shadow-2xl">
+      <div
+        className={`bg-white transition-all duration-300 ${
+          isSticky ? "shadow-md" : "shadow-2xl"
+        }`}
+      >
         <div
           className="
             flex items-center justify-between px-4 md:px-6 md:h-14
             max-w-7xl mx-auto
             2xl:max-w-none 2xl:mx-0 2xl:px-20
-            shadow-2xl
           "
         >
           {/* Left-aligned Nav Links */}
@@ -90,8 +102,6 @@ export default function Header() {
                 } hover:text-[#2E98DA] group`}
               >
                 <span className="pb-1">{link.name}</span>
-
-                {/* Blue underline effect */}
                 <span
                   className={`absolute left-0 bottom-0 h-[2px] w-0 bg-[#2E98DA] ${
                     link.active ? "w-full" : "group-hover:w-full"
@@ -109,7 +119,6 @@ export default function Header() {
             >
               Member login
             </Link>
-
             <div className="flex items-center gap-1 cursor-pointer hover:text-[#2E98DA] transition-colors duration-200">
               <Globe className="w-4 h-4" />
               <span>English</span>
@@ -117,13 +126,13 @@ export default function Header() {
           </div>
         </div>
 
-        {/* --- Mobile Menu (slide down from top hamburger) --- */}
+        {/* --- Mobile Menu --- */}
         <div
           className={`md:hidden bg-white shadow-md transition-max-height duration-300 overflow-hidden ${
             mobileOpen ? "max-h-[400px]" : "max-h-0"
           }`}
         >
-          <div className="lg:block hidden pb-6 space-y-4">
+          <div className="pb-6 space-y-4">
             <nav className="flex flex-col gap-2">
               {[
                 { name: "Home", href: "/", active: true },
@@ -152,7 +161,6 @@ export default function Header() {
               >
                 Member login
               </Link>
-
               <button
                 className="flex items-center gap-2 px-3 py-2 rounded hover:bg-gray-50 text-sm"
                 onClick={() => setMobileOpen(false)}
