@@ -34,7 +34,7 @@ export default function ProgramsSection() {
         {programs.map((program, index) => (
           <div
             key={index}
-            className="bg-white shadow-sm hover:shadow-md transition-all p-10 px-14 flex flex-col items-center text-center w-full sm:w-[70%] lg:w-[50%] max-w-sm gap-6"
+            className="bg-white shadow-sm hover:shadow-md transition-all p-10 px-14 flex flex-col items-center text-center w-full sm:w-[45%] lg:w-[50%] max-w-sm gap-6"
           >
             <h3 className="text-[#3290E9] font-semibold text-lg md:text-xl mb-3">
               {program.title}

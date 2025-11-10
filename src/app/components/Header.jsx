@@ -8,7 +8,7 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="w-full">
+    <header className="w-full shadow-2xl">
       {/* --- Top Black Bar --- */}
       <div className="bg-black text-white">
         <div
@@ -28,7 +28,7 @@ export default function Header() {
               className="object-contain rounded-sm"
             />
             {/* Hide full name on small screens */}
-            <span className="font-medium text-xs sm:text-sm leading-none hidden sm:inline">
+            <span className="font-bold text-sm sm:text-md leading-none hidden sm:inline">
               Cognitive Alliance Forumz (CAF)
             </span>
             <span className="font-medium text-xs sm:hidden">CAF</span>
@@ -37,7 +37,7 @@ export default function Header() {
           {/* Right: Greeting + Icons + Hamburger */}
           <div className="flex items-center gap-3 text-xs sm:text-sm">
             {/* Greeting (desktop only) */}
-            <span className="whitespace-nowrap hidden sm:inline">
+            <span className="whitespace-nowrap hidden sm:inline mr-5">
               Hi Daniel Brin
             </span>
 
@@ -65,16 +65,17 @@ export default function Header() {
       </div>
 
       {/* --- Navigation Bar --- */}
-      <div className="bg-white border-b">
+      <div className="bg-white shadow-2xl">
         <div
           className="
-            flex items-center justify-between px-4 md:px-6 h-14
+            flex items-center justify-between px-4 md:px-6 md:h-14
             max-w-7xl mx-auto
             2xl:max-w-none 2xl:mx-0 2xl:px-20
+            shadow-2xl
           "
         >
           {/* Left-aligned Nav Links */}
-          <nav className="hidden md:flex items-center gap-10 text-sm sm:text-base font-semibold text-gray-800 h-full justify-start w-full">
+          <nav className="hidden md:flex items-center gap-10 text-sm sm:text-base font-semibold text-gray-800 h-full justify-center w-full">
             {[
               { name: "Home", href: "/" },
               { name: "Evaluation", href: "/evaluation" },
@@ -84,14 +85,14 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="relative flex items-center h-full transition-colors duration-200 text-gray-800 hover:text-blue-600 group"
+                className="relative flex items-center h-full transition-colors duration-200 text-gray-800 hover:text-[#2E98DA] group"
               >
                 <span className="pb-1">{link.name}</span>
 
                 {/* Blue underline effect */}
                 <span
                   className="
-                    absolute left-0 bottom-0 h-[2px] w-0 bg-blue-600 
+                    absolute left-0 bottom-0 h-[2px] w-0 bg-[#2E98DA]
                     transition-all duration-300 group-hover:w-full
                   "
                 />
@@ -100,15 +101,15 @@ export default function Header() {
           </nav>
 
           {/* Right-side options (desktop only) */}
-          <div className="hidden md:flex items-center gap-6 text-sm text-blue-500">
+          <div className="hidden md:flex items-center gap-6 text-sm text-[#2E98DA]">
             <Link
               href="/login"
-              className="hover:text-blue-600 transition-colors duration-200 whitespace-nowrap"
+              className="hover:text-[#2E98DA] transition-colors duration-200 whitespace-nowrap"
             >
               Member login
             </Link>
 
-            <div className="flex items-center gap-1 cursor-pointer hover:text-blue-600 transition-colors duration-200">
+            <div className="flex items-center gap-1 cursor-pointer hover:text-[#2E98DA] transition-colors duration-200">
               <Globe className="w-4 h-4" />
               <span>English</span>
             </div>
@@ -117,11 +118,11 @@ export default function Header() {
 
         {/* --- Mobile Menu (slide down from top hamburger) --- */}
         <div
-          className={`md:hidden bg-white border-t shadow-md transition-max-height duration-300 overflow-hidden ${
+          className={`md:hidden bg-white shadow-md transition-max-height duration-300 overflow-hidden ${
             mobileOpen ? "max-h-[400px]" : "max-h-0"
           }`}
         >
-          <div className="px-4 pt-4 pb-6 space-y-4">
+          <div className="lg:block hidden pb-6 space-y-4">
             <nav className="flex flex-col gap-2">
               {[
                 { name: "Home", href: "/" },
@@ -140,11 +141,11 @@ export default function Header() {
               ))}
             </nav>
 
-            <div className="border-t pt-4 flex flex-col gap-3">
+            <div className="flex flex-col gap-3">
               <Link
                 href="/login"
                 onClick={() => setMobileOpen(false)}
-                className="block px-3 py-2 rounded text-blue-600 font-semibold hover:bg-gray-50"
+                className="block px-3 py-2 rounded text-[#2E98DA] font-semibold hover:bg-gray-50"
               >
                 Member login
               </Link>
