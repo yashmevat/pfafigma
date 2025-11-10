@@ -11,11 +11,11 @@ import FooterSection from "./components/FooterSection";
 export default function Home() {
   return (
    <div className="w-full bg-white">
-   <CafAssessments />
+   {/* <CafAssessments /> */}
   <Programs />
       <QuoteSection/>
       <ProgramsSection/>
-      <CAFHelpSection/>
+      {/* <CAFHelpSection/> */}
       <FAQSection/>
       <FooterSection/>
     </div>

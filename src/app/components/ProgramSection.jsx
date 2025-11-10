@@ -30,11 +30,11 @@ export default function ProgramsSection() {
       </h2>
 
       {/* Flexbox layout for cards */}
-      <div className="flex flex-wrap justify-center gap-10">
+      <div className="flex flex-wrap justify-center gap-10 ">
         {programs.map((program, index) => (
           <div
             key={index}
-            className="bg-white shadow-sm hover:shadow-md transition-all p-8 flex flex-col items-center text-center w-full sm:w-[45%] lg:w-[18%] max-w-sm gap-6"
+            className="bg-white shadow-sm hover:shadow-md transition-all p-10 px-14 flex flex-col items-center text-center w-full sm:w-[70%] lg:w-[50%] max-w-sm gap-6"
           >
             <h3 className="text-[#3290E9] font-semibold text-lg md:text-xl mb-3">
               {program.title}
@@ -42,13 +42,15 @@ export default function ProgramsSection() {
             <p className="text-[#9D9D9D] text-sm md:text-base mb-6">
               {program.description}
             </p>
-            <Image
-              src={program.image}
-              alt={program.title}
-              width={220}
-              height={180}
-              className="object-contain"
-            />
+            <div className="w-[220px] h-[180px] flex justify-center items-center">
+              <Image
+                src={program.image}
+                alt={program.title}
+                width={220}
+                height={180}
+                className="object-contain w-full h-full"
+              />
+            </div>
           </div>
         ))}
       </div>
