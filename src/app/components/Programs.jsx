@@ -25,7 +25,7 @@ export default function SchoolProgramCard() {
           />
         </div>
 
-        <p className="text-gray-700 text-sm sm:text-base md:text-[1rem] leading-relaxed md:pr-6">
+        <p className="text-gray-700 text-sm sm:text-base md:text-[1rem] lg:text-[1.1rem] leading-relaxed md:pr-6">
           Children go through key stages—from early bonding and trust-building in infancy,
           to developing independence and self-control in toddlerhood, and forming friendships
           and understanding social rules in early childhood. As they grow, school-age kids

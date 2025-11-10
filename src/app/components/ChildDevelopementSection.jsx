@@ -49,7 +49,7 @@ const ChildDevelopmentSection = () => {
             alt="Child Development"
             width={300}
             height={200}
-            className="w-full h-auto lg:h-full xl:h-[90%]"
+            className="w-full h-auto lg:h-full xl:h-190 2xl:h-160"
           />
         </div>
 

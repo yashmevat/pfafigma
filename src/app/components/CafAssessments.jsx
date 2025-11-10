@@ -72,7 +72,7 @@ export default function CafAssessments() {
       </h2>
 
       {/* Intro Paragraph */}
-      <p className="text-gray-700 text-sm px-5 sm:text-base leading-relaxed mb-10 text-center lg:text-left lg:ml-5">
+      <p className="text-gray-700 text-sm px-5 sm:text-base lg:text-[1.1rem] leading-relaxed mb-10 text-center lg:text-left lg:ml-5">
         Our assessments are thoughtfully designed to support the holistic development of school children by focusing
         on their psychological, social, and environmental conduct. These evaluations provide valuable insights into a
         child’s emotional well-being, interpersonal skills, and awareness of their surroundings, empowering them to grow
@@ -95,11 +95,11 @@ export default function CafAssessments() {
 
             {/* Text Content */}
             <div className="text-left flex-1">
-              <h3 className="text-gray-900 font-bold text-sm sm:text-[1rem] md:text-lg">
+              <h3 className="text-gray-900 font-bold text-sm sm:text-[1rem] md:text-lg lg:text-[1.1rem]">
                 {item.title}
               </h3>
               <div className={`h-0.5 [@media(min-width:0px)_and_(max-width:429px)]:w-75 w-90 sm:w-116 md:w-130 lg:w-135 mb-3 mt-1 mx-auto sm:mx-0 ${linecolor[index]}`}></div>
-              <p className="text-gray-600 text-xs sm:text-sm md:text-[15px] leading-relaxed">
+              <p className="text-gray-600 text-xs sm:text-sm md:text-[15px] lg:text-[1.1rem] leading-relaxed">
                 {item.desc}
               </p>
             </div>

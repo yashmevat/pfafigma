@@ -34,15 +34,17 @@ export default function ProgramsSection() {
         {programs.map((program, index) => (
           <div
             key={index}
-            className="bg-white shadow-sm hover:shadow-md transition-all p-10 px-14 flex flex-col items-center text-center w-full sm:w-[45%] lg:w-[50%] max-w-sm gap-6"
+            className="bg-white shadow-sm hover:shadow-md transition-all p-10 px-14 flex flex-col items-center text-center w-full sm:w-[45%] lg:w-[80%] max-w-sm gap-6
+                 h-130 md:h-150 lg:h-150
+            "
           >
-            <h3 className="text-[#3290E9] font-semibold text-lg md:text-xl mb-3">
+            <h3 className="text-[#3290E9] font-semibold text-xl md:text-2xl mb-3">
               {program.title}
             </h3>
-            <p className="text-[#9D9D9D] text-sm md:text-base mb-6">
+            <p className="text-[#9D9D9D] text-xl sm:text-[1rem] md:text-base mb-6 lg:text-2xl">
               {program.description}
             </p>
-            <div className="w-[220px] h-[180px] flex justify-center items-center">
+            <div className="w-[220px] h-[380px] flex justify-center items-center">
               <Image
                 src={program.image}
                 alt={program.title}

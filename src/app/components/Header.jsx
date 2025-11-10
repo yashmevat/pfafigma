@@ -13,7 +13,7 @@ export default function Header() {
       <div className="bg-black text-white">
         <div
           className="
-            flex items-center justify-between px-4 md:px-6 h-14
+            flex items-center justify-between px-4 md:px-6 h-20
             max-w-7xl mx-auto
             2xl:max-w-none 2xl:mx-0 2xl:px-20
           "
@@ -23,8 +23,8 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="CAF Logo"
-              width={32}
-              height={32}
+              width={50}
+              height={50}
               className="object-contain rounded-sm"
             />
             {/* Hide full name on small screens */}
@@ -75,9 +75,9 @@ export default function Header() {
           "
         >
           {/* Left-aligned Nav Links */}
-          <nav className="hidden md:flex items-center gap-10 text-sm sm:text-base font-semibold text-gray-800 h-full justify-center w-full">
+          <nav className="hidden md:flex items-center gap-10 text-sm sm:text-lg font-semibold text-gray-800 h-full justify-center w-full">
             {[
-              { name: "Home", href: "/" },
+              { name: "Home", href: "/", active: true },
               { name: "Evaluation", href: "/evaluation" },
               { name: "Programs", href: "/programs" },
               { name: "Articles & Discussions", href: "/articles" },
@@ -85,16 +85,17 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="relative flex items-center h-full transition-colors duration-200 text-gray-800 hover:text-[#2E98DA] group"
+                className={`relative flex items-center h-full transition-colors duration-200 ${
+                  link.active ? "text-[#2E98DA]" : "text-gray-800"
+                } hover:text-[#2E98DA] group`}
               >
                 <span className="pb-1">{link.name}</span>
 
                 {/* Blue underline effect */}
                 <span
-                  className="
-                    absolute left-0 bottom-0 h-[2px] w-0 bg-[#2E98DA]
-                    transition-all duration-300 group-hover:w-full
-                  "
+                  className={`absolute left-0 bottom-0 h-[2px] w-0 bg-[#2E98DA] ${
+                    link.active ? "w-full" : "group-hover:w-full"
+                  } transition-all duration-300`}
                 />
               </Link>
             ))}
@@ -125,7 +126,7 @@ export default function Header() {
           <div className="lg:block hidden pb-6 space-y-4">
             <nav className="flex flex-col gap-2">
               {[
-                { name: "Home", href: "/" },
+                { name: "Home", href: "/", active: true },
                 { name: "Evaluation", href: "/evaluation" },
                 { name: "Programs", href: "/programs" },
                 { name: "Articles & Discussions", href: "/articles" },
@@ -134,7 +135,9 @@ export default function Header() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block px-3 py-2 rounded hover:bg-gray-50 text-gray-800 font-medium"
+                  className={`block px-3 py-2 rounded ${
+                    link.active ? "text-[#2E98DA]" : "text-gray-800"
+                  } font-medium`}
                 >
                   {link.name}
                 </Link>
