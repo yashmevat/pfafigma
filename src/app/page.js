@@ -5,6 +5,7 @@ import CAFHelpSection from "./components/CAFHelpSection";
 import ProgramsSection from "./components/ProgramSection";
 import QuoteSection from "./components/QuotaSection";
 import FAQSection from "./components/FAQSection";
+import FooterSection from "./components/FooterSection";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <ProgramsSection/>
       <CAFHelpSection/>
       <FAQSection/>
+      <FooterSection/>
     </div>
   );
 }

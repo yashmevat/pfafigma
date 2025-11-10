@@ -56,18 +56,22 @@ export default function CAFHelpSection() {
         Our assessments are thoughtfully designed to support the holistic development of school children by focusing on their psychological, social, and environmental conduct. These evaluations provide valuable insights into a child’s emotional well-being, interpersonal skills, and awareness of their surroundings, empowering them to grow into well-rounded individuals. Here’s how our assessments can make a meaningful impact:
       </p>
 
-      <div className="space-y-8">
+      {/* Cards section shifted right */}
+      <div className="space-y-8 pl-4 sm:pl-6 md:pl-10">
         {assessments.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col sm:flex-row items-start sm:items-center border-b border-gray-200 pb-4"
+            className="flex flex-col sm:flex-row items-start gap-4"
           >
+            {/* Number box */}
             <div
-              className={`flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-md border-2 font-semibold ${item.color} mb-2 sm:mb-0 sm:mr-4`}
+              className={`flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-md border-2 font-semibold ${item.color} flex-shrink-0`}
             >
               {item.id}
             </div>
-            <div>
+
+            {/* Text content */}
+            <div className="flex flex-col">
               <h3 className="font-semibold text-gray-900 text-base sm:text-lg mb-1">
                 {item.title}
               </h3>
