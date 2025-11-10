@@ -34,53 +34,55 @@ export default function FAQAccordion() {
   };
 
   return (
-    <section className="max-w-3xl mx-auto px-4 sm:px-0 py-8 ">
-      <h2 className="text-2xl font-semibold mb-8 text-left">FAQ - Frequently Asked Questions</h2>
+    <section className="w-full min-h-screen bg-white text-black py-10">
+      <div className="max-w-3xl mx-auto px-4 sm:px-0">
+        <h2 className="text-2xl font-semibold mb-8 text-left">FAQ - Frequently Asked Questions</h2>
 
-      <div className="divide-y divide-gray-200">
-        {faqs.map((item, i) => {
-          const isOpen = i === openIndex;
-          return (
-            <div key={i} className="py-4 flex items-start gap-4">
-              <button
-                onClick={() => toggle(i)}
-                aria-expanded={isOpen}
-                className="flex-none w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
-                aria-label={`${isOpen ? 'Collapse' : 'Expand'} question ${i + 1}`}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  className="w-5 h-5 text-gray-700"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  {isOpen ? (
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 12h12" />
-                  ) : (
-                    <g>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12" />
+        <div className="divide-y divide-gray-200">
+          {faqs.map((item, i) => {
+            const isOpen = i === openIndex;
+            return (
+              <div key={i} className="py-4 flex items-start gap-4">
+                <button
+                  onClick={() => toggle(i)}
+                  aria-expanded={isOpen}
+                  className="flex-none w-9 h-9 rounded-full border border-gray-300 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+                  aria-label={`${isOpen ? 'Collapse' : 'Expand'} question ${i + 1}`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className="w-5 h-5 text-gray-700"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    {isOpen ? (
                       <path strokeLinecap="round" strokeLinejoin="round" d="M6 12h12" />
-                    </g>
-                  )}
-                </svg>
-              </button>
+                    ) : (
+                      <g>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12" />
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 12h12" />
+                      </g>
+                    )}
+                  </svg>
+                </button>
 
-              <div className="flex-1">
-                <h3 className="text-base sm:text-lg font-medium text-gray-800">{item.q}</h3>
+                <div className="flex-1">
+                  <h3 className="text-base sm:text-lg font-medium text-gray-800">{item.q}</h3>
 
-                <div
-                  className={`mt-3 text-sm sm:text-base text-gray-600 leading-relaxed overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
-                    isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
-                  aria-hidden={!isOpen}
-                >
-                  <p>{item.a}</p>
+                  <div
+                    className={`mt-3 text-sm sm:text-base text-gray-600 leading-relaxed overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
+                      isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                    aria-hidden={!isOpen}
+                  >
+                    <p>{item.a}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </section>
   );
