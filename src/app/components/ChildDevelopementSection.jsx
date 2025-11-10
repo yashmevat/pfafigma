@@ -26,10 +26,11 @@ const stages = [
 
 const ChildDevelopmentSection = () => {
   return (
-    <div className="container mx-auto px-6 py-10">
+    
+    <div className="container px-10 py-10 mx-auto max-w-8xl lg:max-w-[70vw]">
       {/* Top Section */}
       <div className="text-left mb-10">
-        <h1 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
+        <h1 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-10">
           The Journey of Child Development: Navigating Key Stages from Infancy to Adolescence
         </h1>
         <p className="text-lg text-gray-600 leading-relaxed mt-4 text-left">

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function QuoteSection() {
   return (
-    <section className="flex flex-col md:flex-row items-stretch justify-center bg-white">
+    <section className="flex flex-col md:flex-row items-stretch justify-center bg-white w-full">
       {/* Left Side - Image */}
       <div className="w-full md:w-[40%] flex justify-center items-center p-4 md:p-10">
         <Image
