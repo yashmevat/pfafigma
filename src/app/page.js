@@ -8,6 +8,9 @@ export default function Home() {
   return (
     <div>
       <QuoteSection/>
+      <ProgramsSection/>
+      <CAFHelpSection/>
+      <FAQSection/>
     </div>
   );
 }
