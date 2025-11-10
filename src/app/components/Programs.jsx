@@ -19,7 +19,7 @@ export default function SchoolProgramCard() {
         {/* Image only visible on small devices (below md) */}
         <div className="block lg:hidden mb-4">
           <img
-            src="https://blog.schoolspecialty.com/wp-content/uploads/2023/02/happy-classroom-learning-environment-GettyImages-1210928359-1200x624.jpg"
+            src="/programs.png"
             alt="Students in classroom"
             className="w-full h-60 sm:h-72 object-cover rounded-md grayscale"
           />
