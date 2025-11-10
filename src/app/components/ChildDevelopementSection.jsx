@@ -49,13 +49,13 @@ const ChildDevelopmentSection = () => {
             alt="Child Development"
             width={300}
             height={200}
-            className="w-[90%] h-auto"
+            className="w-full h-auto lg:h-full xl:h-[90%]"
           />
         </div>
 
         {/* Text Section */}
         <div className="flex-2">
-          <ul className="space-y-[2vh] lg:space-y-[7vh]">
+          <ul className="space-y-[2vh] lg:space-x-[3vh] xl:space-y-[6vh] w-full">
             {stages.map((stage, index) => (
               <li key={index}>
                 <h2 className="text-2xl font-semibold text-gray-800">{index + 1}. {stage.title}</h2>
