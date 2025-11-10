@@ -4,7 +4,7 @@ export default function SchoolProgramCard() {
       {/* Left Image Section (for md and above) */}
       <div className="hidden lg:flex w-full md:w-160 justify-center ml-10 self-center">
         <img
-          src="https://blog.schoolspecialty.com/wp-content/uploads/2023/02/happy-classroom-learning-environment-GettyImages-1210928359-1200x624.jpg"
+          src="/programs.png"
           alt="Students in classroom"
           className="w-full h-[22rem] object-cover grayscale"
         />
