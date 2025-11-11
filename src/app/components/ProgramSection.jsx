@@ -41,7 +41,7 @@ export default function ProgramsSection() {
             <h3 className="text-[#3291E9] font-semibold text-xl md:text-2xl mb-3">
               {program.title}
             </h3>
-            <p className="text-[#8F8F8F] text-xl sm:text-[1rem] md:text-base mb-6 lg:text-2xl">
+            <p className="text-[#8F8F8F] text-xl sm:text-[1.4rem] md:text-[1.5rem] mb-6 lg:text-2xl">
               {program.description}
             </p>
             <div className="w-[220px] h-[380px] flex justify-center items-center">
