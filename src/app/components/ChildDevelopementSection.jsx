@@ -27,13 +27,13 @@ const stages = [
 const ChildDevelopmentSection = () => {
   return (
     
-    <div className="container px-10 py-10 mx-auto max-w-8xl lg:max-w-[70vw]">
+    <div className="container px-10 py-10 mx-auto max-w-8xl lg:max-w-[100vw] xl:max-w-[95vw] [@media(min-width:1536px)_and_(max-width:1550px)]:max-w-[95vw] [@media(min-width:1551px)_and_(max-width:1900px)]:max-w-[85vw] [@media(min-width:1700px)_and_(max-width:2900px)]:max-w-[75vw]">
       {/* Top Section */}
       <div className="text-left mb-10">
-        <h1 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-10">
+        <h1 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-10 2xl:whitespace-nowrap">
           The Journey of Child Development: Navigating Key Stages from Infancy to Adolescence
         </h1>
-        <p className="text-lg text-gray-600 leading-relaxed mt-4 text-left">
+        <p className="text-lg text-gray-600 leading-relaxed mt-4 text-left 2xl:pr-18">
           Children go through key stages—from early bonding and trust-building in infancy, to developing independence and self-control in toddlerhood, 
           and forming friendships and understanding social rules in early childhood. As they grow, school-age kids build self-esteem, empathy, 
           and teamwork, while adolescents explore identity, values, and emotional regulation, shaping their social and psychological maturity.
@@ -41,15 +41,15 @@ const ChildDevelopmentSection = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="flex justify-between gap-4">
+      <div className="flex justify-between gap-4 2xl:w-[70vw] justify-self-center">
         {/* Image Section */}
-        <div className="flex-1 max-w-md lg:block hidden">
+        <div className="lg:block hidden w-80">
           <Image
-            src="/childsection.png" // Replace with the actual image URL
+            src="/journey.svg" // Replace with the actual image URL
             alt="Child Development"
             width={300}
             height={200}
-            className="w-full h-auto lg:h-full xl:h-190 2xl:h-160"
+            className="w-full h-auto lg:h-160 [@media(min-width:1152px)_and_(max-width:1277px)]:h-130 [@media(min-width:1152px)_and_(max-width:1277px)]:-translate-y-11 xl:h-140 2xl:h-145 [@media(min-width:1900px)_and_(max-width:2900px)]:h-160 lg:-translate-y-13 xl:-translate-y-10 2xl:-translate-y-12"
           />
         </div>
 

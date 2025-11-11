@@ -7,7 +7,7 @@ export default function QuoteSection() {
       {/* Left Side - Image */}
       <div className="w-full md:w-[80%] lg:w-[90%] 2xl:w-[55%] flex justify-center lg:justify-start items-center p-4 md:p-10 md:ml-20">
         <Image
-          src="/bronfenbrenner.webp"
+          src="/hero.svg"
           alt="Urie Bronfenbrenner teaching"
           width={450}
           height={400}

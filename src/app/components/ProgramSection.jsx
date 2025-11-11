@@ -7,19 +7,19 @@ export default function ProgramsSection() {
       title: "Assessments",
       description:
         "Free Assessments on Social, Psychological and environmental conduct.",
-      image: "/1.png",
+      image: "/assessment3.svg",
     },
     {
       title: "Trainings",
       description:
         "Free Trainings for kids to improve their social and environmental conduct.",
-      image: "/2.webp",
+      image: "/assessment1.svg",
     },
     {
       title: "Kids Artifacts",
       description:
         "Free Artifacts such as animated videos, Worksheets and PPTs designed for different grades.",
-      image: "/3.png",
+      image: "/assessment2.svg",
     },
   ];
 
