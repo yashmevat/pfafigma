@@ -36,14 +36,14 @@ export default function FAQAccordion() {
 
   return (
     <section className="w-full min-h-screen bg-white text-black py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-0 ">
+      <div className="max-w-7xl mx-auto px-4  ">
         
         {/* ✅ Centered and styled heading */}
-        <h2 className="text-2xl lg:text-4xl font-semibold mb-12  text-gray-900 ">
+        <h2 className="text-2xl lg:text-4xl font-semibold mb-12  text-gray-900 text-center xl:text-left">
           FAQ - Frequently Asked Questions
         </h2>
 
-        <div className="divide-y divide-gray-200 lg:ml-60 ml-3">
+        <div className="divide-y divide-gray-200 xl:ml-60 ml-3">
           {faqs.map((item, i) => {
             const isOpen = i === openIndex;
             return (
