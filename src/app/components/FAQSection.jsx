@@ -46,7 +46,7 @@ export default function FAQAccordion() {
                 <button
                   onClick={() => toggle(i)}
                   aria-expanded={isOpen}
-                  className="flex-none w-9 h-9 rounded-full bg-black flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400"
+                  className="flex-none w-9 h-9 rounded-full bg-black flex items-center justify-center "
                   aria-label={`${isOpen ? 'Collapse' : 'Expand'} question ${i + 1}`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
