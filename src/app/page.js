@@ -4,9 +4,9 @@ import CafAssessments from "./components/CafAssessments";
 
 export default function Home() {
   return (
-   <div className="w-full bg-white">
-   <CafAssessments />
-  <Programs />
-   </div>
+    <div className="w-full bg-white">
+      <CafAssessments />
+      <Programs />
+    </div>
   );
 }
