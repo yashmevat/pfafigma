@@ -4,14 +4,14 @@ export default function SchoolProgramCard() {
       {/* Left Image Section (for md and above) */}
       <div className="hidden lg:flex w-full md:w-160 justify-center ml-10 self-center">
         <img
-          src="/programs.png"
+          src="/cafAssessment.svg"
           alt="Students in classroom"
           className="w-full h-[22rem] object-cover grayscale"
         />
       </div>
 
       {/* Right Content Section */}
-      <div className="w-full md:w-200 p-6 md:p-10 flex flex-col justify-center lg:text-center lg:text-left lg:gap-4">
+      <div className="w-full md:w-200 p-6 md:p-10 flex flex-col justify-center text-center lg:text-left lg:gap-4">
         <h2 className="text-2xl sm:text-3xl font-bold inline-block py-1 mb-4 text-gray-900">
           CAFs Programs At schools
         </h2>

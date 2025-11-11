@@ -9,7 +9,7 @@ export default function QuoteSection() {
       {/* Left Side - Image */}
       <div className="flex justify-center lg:justify-start items-center ">
         <Image
-          src="/bronfenbrenner.webp"
+          src="/hero.svg"
           alt="Urie Bronfenbrenner teaching"
           width={450}
           height={400}
