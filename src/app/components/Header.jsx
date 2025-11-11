@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <header
       className={`w-full z-50 top-0 transition-all duration-300 ${
-        isSticky ? "fixed shadow-lg bg-white/95 backdrop-blur-sm" : "relative"
+        isSticky ? "fixed shadow-sm bg-white/95 backdrop-blur-xs" : "relative"
       }`}
     >
       {/* --- Top Black Bar --- */}

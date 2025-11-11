@@ -55,7 +55,7 @@ const ChildDevelopmentSection = () => {
 
         {/* Text Section */}
         <div className="flex-2">
-          <ul className="space-y-[2vh] lg:space-x-[3vh] xl:space-y-[6vh] w-full">
+          <ul className="space-y-[2vh] lg:space-x-[3vh] xl:space-y-[4vh] w-full">
             {stages.map((stage, index) => (
               <li key={index}>
                 <h2 className="text-2xl font-semibold text-gray-800">{index + 1}. {stage.title}</h2>
