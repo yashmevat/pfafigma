@@ -20,7 +20,7 @@ export default function QuoteSection() {
       {/* Right Side - Text */}
       <div className="w-full  flex flex-col justify-center gap-8 sm:gap-10 md:gap-10 lg:gap-14 lg:pl-20 text-md sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
         {/* Quote Text */}
-        <p className="text-gray-700 lg:w-[90%] 2xl:w-[70%] w-full  leading-tight mb-2 md:mb-4 text-center md:text-left font-semibold">
+        <p className="text-gray-700 lg:w-[90%] 2xl:w-[70%] w-full  leading-tight mb-2 md:mb-4 text-center md:text-left">
           The world of the child is not defined by the walls of the home, nor
           even of the classroom, but extends outward to encompass the larger
           society—the community, the culture, the economic system, and the
