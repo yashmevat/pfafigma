@@ -43,14 +43,14 @@ export default function CafAssessments() {
   ];
 
   const colors = [
-    "bg-[#ededf6] text-black border border-[#4a4c99]",
-    "bg-[#f2edf6] text-black border border-[#744999]",
-    "bg-[#f6edf3] text-black border border-[#9d497e]",
-    "bg-[#fdf6ec] text-black border border-[#e9a642]",
-    "bg-[#f1faf4] text-black border border-[#6bc88d]",
-    "bg-[#ebfbf9] text-black border border-[#30d3c1]",
-    "bg-[#ebf4fc] text-black border border-[#3690e5]",
-    "bg-[#ededf6] text-black border border-[#4a4c99]",
+    "bg-[#ededf6] text-black border-3 border-[#4a4c99]",
+    "bg-[#f2edf6] text-black border-3 border-[#744999]",
+    "bg-[#f6edf3] text-black border-3 border-[#9d497e]",
+    "bg-[#fdf6ec] text-black border-3 border-[#e9a642]",
+    "bg-[#f1faf4] text-black border-3 border-[#6bc88d]",
+    "bg-[#ebfbf9] text-black border-3 border-[#30d3c1]",
+    "bg-[#ebf4fc] text-black border-3 border-[#3690e5]",
+    "bg-[#ededf6] text-black border-3 border-[#4a4c99]",
   ];
 
   const linecolor = [
@@ -88,7 +88,7 @@ export default function CafAssessments() {
           >
             {/* Number Badge */}
             <div
-              className={`flex items-center justify-center w-7 h-7 sm:w-9 sm:h-9 rounded-md font-semibold ${colors[index]} mb-3 sm:mb-0 flex-shrink-0 mx-auto sm:mx-0`}
+              className={`flex items-center justify-center w-7 h-7 sm:w-9 sm:h-9 lg:h-12 lg:w-12 lg:text-xl rounded-md font-semibold ${colors[index]} mb-3 sm:mb-0 flex-shrink-0 mx-auto sm:mx-0`}
             >
               {item.id}
             </div>
