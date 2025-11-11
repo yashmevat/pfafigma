@@ -7,19 +7,19 @@ export default function ProgramsSection() {
       title: "Assessments",
       description:
         "Free Assessments on Social, Psychological and environmental conduct.",
-      image: "/assessment.png",
+      image: "/1.png",
     },
     {
       title: "Trainings",
       description:
         "Free Trainings for kids to improve their social and environmental conduct.",
-      image: "/training.png",
+      image: "/2.webp",
     },
     {
       title: "Kids Artifacts",
       description:
         "Free Artifacts such as animated videos, Worksheets and PPTs designed for different grades.",
-      image: "/kids-artifacts.png",
+      image: "/3.png",
     },
   ];
 
@@ -30,25 +30,29 @@ export default function ProgramsSection() {
       </h2>
 
       {/* Flexbox layout for cards */}
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="flex flex-wrap justify-center gap-10 ">
         {programs.map((program, index) => (
           <div
             key={index}
-            className="bg-white shadow-sm hover:shadow-md transition-all p-8 flex flex-col items-center text-center w-full sm:w-[45%] lg:w-[18%] max-w-sm"
+            className="bg-white shadow-sm hover:shadow-md transition-all p-10 px-14 flex flex-col items-center text-center w-full sm:w-[45%] lg:w-[80%] max-w-sm gap-6
+                 h-130 md:h-150 lg:h-150
+            "
           >
-            <h3 className="text-sky-600 font-semibold text-lg md:text-xl mb-3">
+            <h3 className="text-[#3290E9] font-semibold text-xl md:text-2xl mb-3">
               {program.title}
             </h3>
-            <p className="text-gray-600 text-sm md:text-base mb-6">
+            <p className="text-[#9D9D9D] text-xl sm:text-[1rem] md:text-base mb-6 lg:text-2xl">
               {program.description}
             </p>
-            <Image
-              src={program.image}
-              alt={program.title}
-              width={220}
-              height={180}
-              className="object-contain"
-            />
+            <div className="w-[220px] h-[380px] flex justify-center items-center">
+              <Image
+                src={program.image}
+                alt={program.title}
+                width={220}
+                height={180}
+                className="object-contain w-full h-full"
+              />
+            </div>
           </div>
         ))}
       </div>
