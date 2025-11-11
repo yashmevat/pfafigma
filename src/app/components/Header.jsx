@@ -55,8 +55,6 @@ export default function Header() {
             </span>
             <User className="w-5 h-5" />
             <MoreVertical className="w-5 h-5 hidden sm:flex" />
-
-            {/* Hamburger (mobile only) */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-expanded={mobileOpen}

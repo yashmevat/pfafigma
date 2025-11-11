@@ -27,7 +27,8 @@ const faqs = [
 ];
 
 export default function FAQAccordion() {
-  const [openIndex, setOpenIndex] = useState(-1);
+  // ✅ Set first FAQ open by default (index 0)
+  const [openIndex, setOpenIndex] = useState(0);
 
   const toggle = (i) => {
     setOpenIndex((prev) => (prev === i ? -1 : i));
@@ -35,10 +36,14 @@ export default function FAQAccordion() {
 
   return (
     <section className="w-full min-h-screen bg-white text-black py-10">
-      <div className="max-w-3xl mx-auto px-4 sm:px-0">
-        <h2 className="text-3xl font-semibold mb-8">FAQ - Frequently Asked Questions</h2>
+      <div className="max-w-7xl mx-auto px-4 sm:px-0 ">
+        
+        {/* ✅ Centered and styled heading */}
+        <h2 className="text-2xl lg:text-4xl font-semibold mb-12  text-gray-900 ">
+          FAQ - Frequently Asked Questions
+        </h2>
 
-        <div className="divide-y divide-gray-200 lg:ml-20 ml-3">
+        <div className="divide-y divide-gray-200 lg:ml-60 ml-3">
           {faqs.map((item, i) => {
             const isOpen = i === openIndex;
             return (
@@ -46,8 +51,11 @@ export default function FAQAccordion() {
                 <button
                   onClick={() => toggle(i)}
                   aria-expanded={isOpen}
-                  className="flex-none w-9 h-9 rounded-full bg-black flex items-center justify-center "
-                  aria-label={`${isOpen ? 'Collapse' : 'Expand'} question ${i + 1}`}>
+                  className={`flex-none w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 ${
+                    isOpen ? 'bg-gray-800' : 'bg-black'
+                  }`}
+                  aria-label={`${isOpen ? 'Collapse' : 'Expand'} question ${i + 1}`}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -68,10 +76,12 @@ export default function FAQAccordion() {
                 </button>
 
                 <div className="flex-1">
-                  <h3 className="text-base font-bold sm:text-lg  text-gray-800">{item.q}</h3>
+                  <h3 className="text-xl font-bold sm:text-xl text-gray-800">
+                    {item.q}
+                  </h3>
 
                   <div
-                    className={`mt-3 text-sm sm:text-base text-gray-600 leading-relaxed overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
+                    className={`mt-3 text-xl sm:text-xl text-gray-600 leading-relaxed overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
                       isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                     }`}
                     aria-hidden={!isOpen}
