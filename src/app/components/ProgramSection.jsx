@@ -34,7 +34,7 @@ export default function ProgramsSection() {
         {programs.map((program, index) => (
           <div
             key={index}
-            className="bg-white shadow-sm hover:shadow-md transition-all p-10 px-14 flex flex-col items-center text-center w-full  lg:w-[80%] max-w-[485px] gap-6
+            className="bg-white shadow-sm hover:shadow-md transition-all p-10 px-14 flex flex-col items-center text-center w-full  lg:w-[30%] max-w-[485px] gap-6
                  h-130 md:h-150 lg:h-160 rounded-md
             "
           >

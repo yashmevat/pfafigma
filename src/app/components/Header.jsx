@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <header
       className={`w-full z-50 top-0 transition-all duration-300 ${
-        isSticky ? "fixed shadow-sm bg-white/95 backdrop-blur-xs" : "relative"
+        isSticky ? "fixed bg-white/95 backdrop-blur-xs" : "relative"
       }`}
     >
       {/* --- Top Black Bar --- */}
@@ -74,7 +74,7 @@ export default function Header() {
       {/* --- Navigation Bar --- */}
       <div
         className={`bg-white transition-all duration-300 ${
-          isSticky ? "shadow-md" : "shadow-2xl"
+          isSticky ? "shadow-md" : "shadow-md"
         }`}
       >
         <div
