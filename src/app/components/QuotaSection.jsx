@@ -5,7 +5,7 @@ export default function QuoteSection() {
   return (
     <div className="flex justify-center items-center">
 
-    <section className="flex flex-col lg:flex-row items-center justify-center bg-white w-[90vw] xl:w-[80vw] gap-5 sm:gap-5 md:gap-5 lg:gap-10 xl:gap-20">
+    <section className="flex flex-col lg:flex-row items-center justify-center bg-white w-[90vw] xl:w-[95vw] [@media(min-width:1024px)_and_(max-width:1279px)]:w-[95vw]  [@media(min-width:1536px)_and_(max-width:1620px)]:w-[95vw] [@media(min-width:1621px)_and_(max-width:1715px)]:w-[90vw] [@media(min-width:1716px)_and_(max-width:1800px)]:w-[88vw] [@media(min-width:1801px)_and_(max-width:3000px)]:w-[80vw] gap-5 sm:gap-5 md:gap-5 lg:gap-10 xl:gap-20">
       {/* Left Side - Image */}
       <div className="flex justify-center lg:justify-start items-center ">
         <Image
@@ -13,7 +13,7 @@ export default function QuoteSection() {
           alt="Urie Bronfenbrenner teaching"
           width={450}
           height={400}
-          className="object-cover w-80 md:w-100 lg:w-177 "
+          className="object-cover w-80 md:w-100 lg:w-120 xl:w-155 2xl:w-177"
         />
       </div>
 

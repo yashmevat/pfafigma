@@ -85,7 +85,7 @@ export default function Header() {
           "
         >
           {/* Left-aligned Nav Links */}
-          <nav className="hidden md:flex items-center gap-10 text-sm sm:text-lg font-semibold text-gray-800 h-full justify-center w-full">
+          <nav className="hidden md:flex items-center gap-10 text-sm sm:text-lg lg:text-base xl:text-lg font-semibold text-gray-800 h-full justify-center w-full lg:ml-30 [@media(min-width:1180px)_and_(max-width:1278px)]:ml-15 [@media(min-width:1280px)_and_(max-width:1350px)]:ml-40 [@media(min-width:1351px)_and_(max-width:1535px)]:ml-20  2xl:ml-0">
             {[
               { name: "Home", href: "/", active: true },
               { name: "Evaluation", href: "/evaluation" },
