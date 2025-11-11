@@ -98,8 +98,8 @@ export default function CafAssessments() {
               <h3 className="text-gray-900 font-bold text-sm sm:text-[1rem] md:text-lg lg:text-[1.1rem]">
                 {item.title}
               </h3>
-              <div className={`h-0.5 [@media(min-width:0px)_and_(max-width:429px)]:w-75 w-90 sm:w-116 md:w-130 lg:w-135 mb-3 mt-1 mx-auto sm:mx-0 ${linecolor[index]}`}></div>
-              <p className="text-gray-600 text-xs sm:text-sm md:text-[15px] lg:text-[1.1rem] leading-relaxed">
+              <div className={`h-0.5 [@media(min-width:425px)_and_(max-width:429px)]:w-90 sm:w-116 md:w-130 lg:w-135 mb-3 mt-1 mx-auto sm:mx-0 ${linecolor[index]}`}></div>
+              <p className="text-gray-600 text-xs sm:text-sm md:text-[15px] leading-relaxed">
                 {item.desc}
               </p>
             </div>
