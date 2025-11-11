@@ -3,22 +3,24 @@ import Image from "next/image";
 
 export default function QuoteSection() {
   return (
-    <section className="flex flex-col lg:flex-row items-stretch justify-center bg-white w-full">
+    <div className="flex justify-center items-center">
+
+    <section className="flex flex-col lg:flex-row items-center justify-center bg-white w-[90vw] xl:w-[80vw] gap-5 sm:gap-5 md:gap-5 lg:gap-10 xl:gap-20">
       {/* Left Side - Image */}
-      <div className="w-full md:w-[80%] lg:w-[90%] 2xl:w-[55%] flex justify-center lg:justify-start items-center p-4 md:p-10 md:ml-20">
+      <div className="flex justify-center lg:justify-start items-center ">
         <Image
           src="/bronfenbrenner.webp"
           alt="Urie Bronfenbrenner teaching"
           width={450}
           height={400}
-          className="object-cover h-[300px] w-[80%] sm:h-100 lg:h-110"
+          className="object-cover w-80 md:w-100 lg:w-160 "
         />
       </div>
 
       {/* Right Side - Text */}
-      <div className="w-full  flex flex-col justify-center px-6 md:px-12 lg:px-0 lg:mr-15 xl:mr-0 py-8 md:gap-14">
+      <div className="w-full  flex flex-col justify-center gap-8 sm:gap-10 md:gap-10 lg:gap-14 lg:pl-20 text-md sm:text-lg md:text-lg lg:text-xl xl:text-2xl">
         {/* Quote Text */}
-        <p className="text-gray-700 xl:w-[70%] w-full text-sm sm:text-lg md:text-md lg:text-xl xl:text-2xl leading-relaxed mb-4 text-center md:text-left">
+        <p className="text-gray-700 lg:w-[90%] 2xl:w-[70%] w-full  leading-relaxed mb-2 md:mb-4 text-center md:text-left">
           The world of the child is not defined by the walls of the home, nor
           even of the classroom, but extends outward to encompass the larger
           society—the community, the culture, the economic system, and the
@@ -26,11 +28,11 @@ export default function QuoteSection() {
         </p>
 
         {/* Author Info */}
-        <div className="text-center md:text-left md:self-end mt-4 md:mr-20 w-full md:w-[70%]">
-          <p className="text-gray-900 font-semibold text-sm sm:text-base md:text-2xl">
+        <div className="text-center md:text-left md:self-end md:mr-20 w-full md:w-[70%]">
+          <p className="text-gray-900 font-semibold">
             - Urie Bronfenbrenner (1917–2005)
           </p>
-          <p className="text-gray-600 text-xs sm:text-sm md:text-xl">
+          <p className="text-gray-600 ">
             Developmental Psychologist, Researcher, and Professor
             <br />
             (Cornell University)
@@ -38,5 +40,7 @@ export default function QuoteSection() {
         </div>
       </div>
     </section>
+    
+    </div>
   );
 }
