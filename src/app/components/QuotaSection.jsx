@@ -13,7 +13,7 @@ export default function QuoteSection() {
           alt="Urie Bronfenbrenner teaching"
           width={450}
           height={400}
-          className="object-cover w-80 md:w-100 lg:w-120 xl:w-155 2xl:w-177"
+          className="object-cover w-80 md:w-100 lg:w-110 xl:w-155 2xl:w-175"
         />
       </div>
 
