@@ -20,9 +20,7 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full z-50 top-0 transition-all duration-300 ${
-        isSticky ? "fixed bg-white/95 backdrop-blur-xs" : "relative"
-      }`}
+      className={`w-full z-50 top-0 transition-all duration-300 sticky `}
     >
       {/* --- Top Black Bar --- */}
       <div className="bg-black text-white">
