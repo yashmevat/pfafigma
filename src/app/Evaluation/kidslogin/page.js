@@ -1,9 +1,12 @@
 "use client";
 import { useState, useRef } from "react";
-import Header from "../components/Header";
+import Header from "../../../components/Header";
 import { FaArrowRight } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 export default function OTPLoginStatic() {
+     const router = useRouter();
     const [phone, setPhone] = useState("");
     const [otp, setOtp] = useState(["", "", "", ""]);
     const [errors, setErrors] = useState({});
@@ -45,7 +48,13 @@ export default function OTPLoginStatic() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!validateForm()) return;
-        alert("✅ OTP Verified Successfully!");
+
+        toast.success("✅ OTP Verified Successfully!");
+
+        // Redirect after short delay
+        setTimeout(() => {
+            router.push("/evaluation/kidsdetails"); // change route as per your app
+        }, 1500);
     };
 
     return (
@@ -72,6 +81,9 @@ export default function OTPLoginStatic() {
                                 <label className="block text-[1.05rem] font-medium text-black">
                                     Phone Number (for OTP)
                                 </label>
+                                  {errors.phone && (
+                                <p className="text-sm text-red-500">{errors.phone}</p>
+                            )}
                                 <div className="flex items-center gap-2 mb-2">
 
                                     <input
@@ -96,14 +108,15 @@ export default function OTPLoginStatic() {
                                     </button>
                                 </div>
                             </div>
-                            {errors.phone && (
-                                <p className="text-xs text-red-500 mb-4">{errors.phone}</p>
-                            )}
+                          
 
                             {/* OTP Fields */}
                             <label className="block text-[1.05rem] font-medium text-black mb-2">
                                 OTP
                             </label>
+                             {errors.otp && (
+                                <p className="text-sm text-red-500 mb-3">{errors.otp}</p>
+                            )}
                             <div className="flex gap-2 mb-2">
                                 {otp.map((digit, i) => (
                                     <input
@@ -119,9 +132,7 @@ export default function OTPLoginStatic() {
                                     />
                                 ))}
                             </div>
-                            {errors.otp && (
-                                <p className="text-xs text-red-500 mb-2">{errors.otp}</p>
-                            )}
+                           
 
                             <p className="text-[12px] text-black mb-5">
                                 Enter the OTP received via SMS

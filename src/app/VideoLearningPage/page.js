@@ -10,7 +10,7 @@ import {
     Star,
     Users,
 } from "lucide-react";
-import Header from "../components/Header";
+import Header from "../../components/Header";
 
 export default function Home() {
     const [selectedVideo, setSelectedVideo] = useState({
