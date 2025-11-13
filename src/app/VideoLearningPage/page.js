@@ -24,7 +24,7 @@ export default function Home() {
         {
             title: "Socio-psychological values",
             subtitle: "Training attended by 1000+ students.",
-            url: "https://www.w3schools.com/html/mov_bbb.mp4",
+            url: "    ",
             thumb: "/videoThum1.png",
         },
         {

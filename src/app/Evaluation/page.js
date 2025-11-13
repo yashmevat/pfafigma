@@ -14,7 +14,7 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row gap-6 md:gap-10 max-w-120 md:max-w-215 justify-center h-68">
                     {/* Card 1: For Kids / Parents */}
                     <Link
-                        href="/kids-parents"
+                        href="/kidsotp"
                         className="group flex flex-col md:flex-row items-center bg-white h-95 md:h-90 lg:h-70 2xl:h-68 rounded-xl shadow-lg hover:shadow-lg transition-all duration-300 p-6 pb-18 cursor-pointer"
                     >
                         <img

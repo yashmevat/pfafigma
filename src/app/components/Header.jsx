@@ -18,7 +18,7 @@ export default function Header() {
 
   const links = [
     { name: "Home", href: "/" },
-    { name: "Evaluation", href: "/Evaluation" },
+    { name: "Evaluation", href: "/evaluation" },
     { name: "Programs & resources", href: "/VideoLearningPage" },
     { name: "Articles & Discussions", href: "/articles" },
   ];
