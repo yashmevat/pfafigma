@@ -53,7 +53,7 @@ export default function OTPLoginStatic() {
 
         // Redirect after short delay
         setTimeout(() => {
-            router.push("/evaluation/kidsdetails"); // change route as per your app
+            router.push("/"); // change route as per your app
         }, 1500);
     };
 

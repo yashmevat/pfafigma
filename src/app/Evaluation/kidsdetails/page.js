@@ -30,7 +30,7 @@ export default function OTPLoginStatic() {
         toast.success("✅ Details submitted successfully!");
 
         setTimeout(() => {
-            router.push("/dashboard"); // redirect after success
+            router.push("/"); // redirect after success
         }, 1500);
     };
 
